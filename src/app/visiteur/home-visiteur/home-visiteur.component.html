@@ -1,1 +1,26 @@
-<p>home-visiteur works!</p>
+<div class="bloc">
+    <!-- Question 10 de TP (faut refaire la div pour les autres films)
+        <div>
+        <h4> Nom du film : {{tabFilms[0].nomFilm}} </h4>
+        <img [src]="tabFilms[0].imageFilm" class="image">
+        <button (click)="onJaime(0)">J’aime</button><span>{{tabFilms[0].nbJaime}}</span><br>
+        <button (click)="onAimePas(0)">Je n'aime pas</button><span>{{tabFilms[0].nbJenaimePas}}</span>
+        </div>
+    -->
+    <!--    ******
+            Question 6 du TP 4 J ai utilisé un seul button au lieu de deux comme dans l enoncé en utilisant
+            la function swap() qui change la valeur de descVisible a chaque fois l utilisateur clique sur le bouton ,
+            vous trouvez la fonction swap() dans hope.visiteur.component.ts avec la fonction check() qui retourne un string soit 'Moins d'infos'
+            si descVisible == true OU 'Plus d'infos' si descVisible = false
+            ****** --> 
+        <!--<div *ngFor="let  f of tabFilms; let index=index" >
+        <div >
+            <h4>{{f.nom}}</h4>
+            <p *ngIf="f.descVisible">{{f.description}}</p>
+            <button (click)="swap(f)" class="btnInfo">{{check(f)}}</button> 
+                     
+        </div>
+
+    </div>
+</div>-->
+<app-detail-film *ngFor="let  f of tabFilms; let index=index" [desc]="f.description" [f]="f"></app-detail-film>
