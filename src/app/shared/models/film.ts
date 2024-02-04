@@ -1,10 +1,10 @@
 export class Film {
-    id? : string;
+    id? : string ;
     nom? : string;
     description? : string;
     descVisible? : boolean;
     constructor(args: Partial<Film> = {}) {
-        this.id=args.id || '';
+        this.id=args.id || '0';
         this.nom = args.nom || '';
         this.description = args.description || '';
         this.descVisible = args.descVisible ;
