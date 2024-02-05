@@ -16,3 +16,15 @@ color:black;
 .active {
     background-color: #dfdfdf;
 }
+.logout-link{
+text-decoration: none;
+display:inline-block;
+margin : 0px;
+padding:5px;
+}
+.logout-link:active{
+    color:black;
+}
+.logout-link:hover{
+    cursor: pointer;
+}

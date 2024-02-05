@@ -12,6 +12,10 @@ export class FilmsService {
   {
     return this.films;
   }
+  modifierFilm(id:number,n:string,d:string):void{
+    this.films[id].nom=n;
+    this.films[id].description=d;
+  }
   deleteFilm(nomFilm : any) : void {
     
     
@@ -24,7 +28,7 @@ export class FilmsService {
      }
       }
       getFilmParId (id : number) : Film  {
-        return this.films[id]
+        return this.films[id-1]
       }
   ajouterFilm(nvNom : any ,nvDesc : any) : void {
     const nvFilm : Film = {id : '',nom:nvNom,description:nvDesc,descVisible : true,
@@ -35,11 +39,10 @@ export class FilmsService {
     this.descVisible=false;
       }
     }
-
     if (this.films.length==0) { nvFilm.id='1'; this.films.push(nvFilm)}
     else {
       let l=FILMS.length;
-      nvFilm.id=String (this.films.length)+1;
+      nvFilm.id=String ((this.films.length)+1);
       this.films.push(nvFilm) 
     
   }

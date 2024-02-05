@@ -1,5 +1,5 @@
 <div *ngFor="let f of tabFilms; let index=index">
     <h6>{{f.nom}}</h6>
-    <button class="btnInfo" (click)="this.supprimer(f.nom)">Supprimer</button><a [routerLink]="['/admin/details',f.id]">Details</a>
+    <button class="btnInfo" (click)="this.supprimer(f.nom)">Supprimer</button><button class="btnInfo" [routerLink]="['/admin/modifier',f.id]">Modifier</button><a [routerLink]="['/admin/details',f.id]">Details</a>
 </div>
 
