@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { ErreurComponent } from './erreur/erreur.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthModule } from './auth/auth.module';
-
-
+import {AngularFireModule}from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,8 @@ import { AuthModule } from './auth/auth.module';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    AuthModule
+    AuthModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
