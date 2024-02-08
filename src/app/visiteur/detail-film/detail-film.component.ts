@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
-import { Film } from 'src/app/shared/models/film';
 
 @Component({
   selector: 'app-detail-film',
@@ -8,7 +7,10 @@ import { Film } from 'src/app/shared/models/film';
   styleUrls: ['./detail-film.component.css']
 })
 export class DetailFilmComponent {
-  
+  toggleDescription(): void {
+    this.descVisible = !this.descVisible;
+  }
 @Input() desc? : string ;
-@Input() f? :Film;
+@Input() f? :any;
+@Input() descVisible?:boolean=false;
 }

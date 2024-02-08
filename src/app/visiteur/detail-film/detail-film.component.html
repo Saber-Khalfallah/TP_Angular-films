@@ -1,6 +1,6 @@
 <div>
-    <h6>{{f?.nom}}</h6>
-<p *ngIf="f?.descVisible">{{desc}}</p>
-<button class="btnInfo" *ngIf="f?.descVisible" (click)="f?.cacherDesc()">Moins d'infos</button>
-<button class="btnInfo" *ngIf="!f?.descVisible" (click)="f?.afficheDesc()">Plus d'infos</button> 
+    <h6>{{f.payload.doc.data().nom}}</h6>
+<p *ngIf="descVisible">{{f.payload.doc.data().description}}</p>
+<button class="btnInfo" *ngIf="descVisible" (click)="toggleDescription()">Moins d'infos</button>
+<button class="btnInfo" *ngIf="!descVisible" (click)="toggleDescription()">Plus d'infos</button> 
 </div>
