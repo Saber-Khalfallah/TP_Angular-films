@@ -1,7 +1,7 @@
 <div *ngFor="let f of tabFilms ; let index = index">
     <h3> {{f.payload.doc.data().nom}}</h3>
-    <a class="btnInfo" [routerLink]="['../modifier',f.payload.doc.id]">Modifier</a>
-    <button class="btnInfo"(click)="supprimer(f.payload.doc.id)">Supprimer</button>&nbsp;
-    <a [routerLink]="['../details', f.payload.doc.id]">Détails</a>
+    <button class="css-button-arrow--grey"><a [routerLink]="['../modifier',f.payload.doc.id]">Modifier</a></button>
+    <button class="css-button-arrow--grey"(click)="supprimer(f.payload.doc.id)">Supprimer</button>&nbsp;
+    <button class="css-button-arrow--grey"><a [routerLink]="['../details', f.payload.doc.id]">Détails</a></button>
 </div>
     

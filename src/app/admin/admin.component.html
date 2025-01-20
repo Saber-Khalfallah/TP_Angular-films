@@ -2,9 +2,16 @@
     Bienvenue Admin
     </h1>
     <nav>
-    <a routerLink="liste-des-films" routerLinkActive="active">Liste des films</a>&nbsp;
-    <a routerLink="ajouter-un-film" routerLinkActive="active">Ajouter un film</a>
-    <a routerLink="../visiteur" routerLinkActive="active">Voir Visiteur</a>
-    <a (click)="logout()" class="logout-link">Deconnexion</a>
+        <div class="logo">EgyWorst</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+            <li><a routerLink="liste-des-films" routerLinkActive="active">Liste des films</a>&nbsp;</li>
+        <li><a routerLink="ajouter-un-film" routerLinkActive="active">Ajouter un film</a></li>
+        <li><a routerLink="../visiteur" routerLinkActive="active">Voir Visiteur</a></li>
+        <li><a (click)="logout()" class="logout-link">Deconnexion</a></li>
+        </ul>
     </nav>
     <router-outlet></router-outlet>

@@ -2,8 +2,15 @@
     Bienvenue Visiteur
     </h1>
     <nav>
-    <a routerLink="home-visiteur" routerLinkActive="active">Accueil</a>&nbsp;
-    <a routerLink="apropos" routerLinkActive="active">A propos</a>
-    <a routerLink="../admin" routerLinkActive="active">Voir Admin</a>
+        <div class="logo">EgyWorst</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+        <li><a routerLink="home-visiteur" routerLinkActive="active">Accueil</a>&nbsp;</li>
+        <li><a routerLink="apropos" routerLinkActive="active">A propos</a></li>
+        <li><a routerLink="../admin" routerLinkActive="active">Voir Admin</a></li>
+        </ul>
     </nav>
     <router-outlet></router-outlet>

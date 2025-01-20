@@ -1,6 +1,6 @@
 <div>
     <h6>{{f.payload.doc.data().nom}}</h6>
 <p *ngIf="descVisible">{{f.payload.doc.data().description}}</p>
-<button class="btnInfo" *ngIf="descVisible" (click)="toggleDescription()">Moins d'infos</button>
-<button class="btnInfo" *ngIf="!descVisible" (click)="toggleDescription()">Plus d'infos</button> 
+<button class="css-button-arrow--grey" *ngIf="descVisible" (click)="toggleDescription()">Moins d'infos</button>
+<button class="css-button-arrow--grey" *ngIf="!descVisible" (click)="toggleDescription()">Plus d'infos</button> 
 </div>
